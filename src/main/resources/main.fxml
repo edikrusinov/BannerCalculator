@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox id="background" fx:id="mainVbox" alignment="CENTER" prefHeight="650.0" prefWidth="800.0" spacing="10" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ui.controller.MainController">
+   <HBox prefHeight="20.0" prefWidth="200.0">
+      <children>
+         <VBox alignment="TOP_CENTER" />
+      </children>
+   </HBox>
+   <HBox alignment="TOP_CENTER" minHeight="80.0" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <ImageView fitHeight="80.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@logo.png" />
+            </image>
+         </ImageView>
+      </children></HBox>
+   <VBox>
+      <children>
+         <HBox spacing="50.0">
+            <children>
+               <VBox id="style.css" maxWidth="-Infinity" prefHeight="324.0" prefWidth="405.0" HBox.hgrow="NEVER">
+                  <children>
+                     <Label alignment="BOTTOM_CENTER" styleClass="label-title" stylesheets="@styles.css" text="Высота:">
+                        <font>
+                           <Font name="Roboto Light" size="12.0" />
+                        </font></Label>
+                      <TextField fx:id="heightIn" maxHeight="42.0" minHeight="42.0" prefColumnCount="42" prefHeight="42.0" promptText="Введите число" styleClass="input-field" stylesheets="@styles.css">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets top="5.0" />
+                        </VBox.margin>
+                     </TextField>
+                     <Label alignment="BOTTOM_CENTER" styleClass="label-title" text="Ширина:">
+                        <padding>
+                           <Insets top="20.0" />
+                        </padding>
+                     </Label>
+                      <TextField fx:id="widthIn" maxHeight="42.0" minHeight="42.0" prefColumnCount="42" prefHeight="42.0" promptText="Введите число" styleClass="input-field" stylesheets="@styles.css">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets top="5.0" />
+                        </VBox.margin>
+                     </TextField>
+                     <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                        <children>
+                           <CheckBox fx:id="addedCosts" alignment="CENTER" mnemonicParsing="false" prefHeight="20.0" prefWidth="150.0" styleClass="label-text" text="Доп. расходы">
+                              <padding>
+                                 <Insets top="12.0" />
+                              </padding></CheckBox>
+                           <TextField fx:id="addedCostsIn" maxHeight="42.0" minHeight="42.0" prefColumnCount="42" prefHeight="42.0" prefWidth="153.0" promptText="0" styleClass="input-field" text="0">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <HBox.margin>
+                                 <Insets left="24.0" />
+                              </HBox.margin></TextField>
+                        </children>
+                        <VBox.margin>
+                           <Insets top="30.0" />
+                        </VBox.margin>
+                     </HBox>
+                     <HBox prefWidth="200.0" spacing="57.0" styleClass="label-text">
+                        <children>
+                         <CheckBox fx:id="frame" styleClass="label-text" text="Каркас" />
+                         <CheckBox fx:id="edgeSealing" styleClass="label-text" text="Проклейка" />
+                        </children>
+                        <VBox.margin>
+                           <Insets top="20.0" />
+                        </VBox.margin>
+                     </HBox>
+                     <HBox spacing="50.0" styleClass="label-text">
+                        <children>
+                         <CheckBox fx:id="installation" styleClass="label-text" text="Монтаж" />
+                         <CheckBox fx:id="grommet" styleClass="label-text" text="Люверсы" />
+                        </children>
+                        <VBox.margin>
+                           <Insets top="22.0" />
+                        </VBox.margin>
+                     </HBox>
+                     <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" styleClass="label-text">
+                        <children>
+                         <CheckBox fx:id="design" styleClass="label-text" text="Дизайн" />
+                        </children>
+                        <VBox.margin>
+                           <Insets top="20.0" />
+                        </VBox.margin>
+                     </HBox>
+                  </children>
+                  <padding>
+                     <Insets left="50.0" />
+                  </padding>
+               </VBox>
+                <TableView fx:id="table" maxWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" stylesheets="@styles.css">
+                    <columns>
+                        <TableColumn fx:id="positionCol" maxWidth="300.0" prefWidth="247.0" sortable="false" text="Наименование">
+                        <styleClass>
+                           <String fx:value="label-title" />
+                           <String fx:value="tible-cell" />
+                        </styleClass>
+                     </TableColumn>
+                        <TableColumn fx:id="valueCol" maxWidth="174.0" prefWidth="120.0" sortable="false" text="Результат">
+                        <styleClass>
+                           <String fx:value="label-title" />
+                           <String fx:value="tible-cell" />
+                        </styleClass>
+                     </TableColumn>
+                    </columns>
+                  <styleClass>
+                     <String fx:value="table-row-cell" />
+                     <String fx:value="label-title" />
+                     <String fx:value="table" />
+                     <String fx:value="tible-cell" />
+                  </styleClass>
+                  <padding>
+                     <Insets right="20.0" />
+                  </padding>
+                  <HBox.margin>
+                     <Insets right="20.0" />
+                  </HBox.margin>
+                </TableView>
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </HBox>
+      </children>
+   </VBox>
+    <Label fx:id="result" text="" textAlignment="CENTER" textFill="RED">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font></Label>
+   <VBox alignment="CENTER" prefHeight="98.0" prefWidth="600.0">
+      <children>
+          <Button alignment="CENTER" onAction="#onButton" styleClass="calc-button" text="Рассчитать" textAlignment="CENTER">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin></Button>
+      </children>
+   </VBox>
+
+</VBox>

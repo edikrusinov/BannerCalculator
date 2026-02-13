@@ -1,0 +1,140 @@
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #292929, #292929);
+    -fx-font-family: "Roboto";
+}
+
+.background{
+-fx-background-color: #ffd105
+}
+
+/* Заголовки */
+.label-title {
+    -fx-text-fill: #f5c542;
+    -fx-font-size: 16px;
+
+}
+
+.label-text {
+    -fx-text-fill: #f5c542;
+    -fx-font-size: 14px;
+
+}
+
+
+.v-box-main{
+-fx-background-color: #383838;
+
+}
+
+/* Поля ввода */
+.input-field {
+    -fx-background-color: #363636;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #4b4f5c;
+    -fx-padding: 10 14;
+    -fx-font-size: 14px;
+}
+
+
+
+
+/* Таблица */
+.table  {
+    -fx-background-color: #ffd105;
+}
+
+.table .column-header-background {
+    -fx-background-color: #f5c542;
+}
+
+.table .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+
+.table-row-cell {
+    -fx-background-color: #292929;
+    -fx-text-fill: white;
+    -fx-table-cell-border-color: transparent;
+    -fx-cell-size: 30px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #363636;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #696969; /* Цвет фона выделения */
+    -fx-text-fill: black;
+}
+.table-row-cell:selected.text {
+    -fx-fill: black;
+}
+
+
+/* Кнопка */
+.calc-button {
+    -fx-background-color: #f5c542;
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 40;
+    -fx-background-radius: 10;
+}
+
+.calc-button:hover {
+    -fx-background-color: #ffd966;
+}
+
+.calc-button: pressed{
+    -fx-background-color: #21ff25;
+    }
+
+
+* {
+	-fx-darkest-grey-color: #323232;
+}
+
+/* ===== БАЗОВЫЙ ЧЕКБОКС ===== */
+.check-box > .box {
+    -fx-background-color: #3a3a3a;
+    -fx-border-color: #f5c400;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-pref-width: 24px;
+    -fx-pref-height: 24px;
+    -fx-alignment: center;
+}
+
+/* Убираем стандартную галочку */
+.check-box > .box > .mark {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Толстая галочка 24x24 */
+.check-box > .box {
+    -fx-background-color: #3a3a3a;
+    -fx-border-color: #f5c400;
+    -fx-border-width: 2px;
+    -fx-pref-width: 24px;
+    -fx-pref-height: 24px;
+}
+
+.check-box > .box > .mark {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+
+}
+
+.check-box:selected > .box > .mark {
+        -fx-background-color: #f5c400;
+        -fx-shape: "M4 15 L7 18 L10 18 L19 9 L19 7 L16 7 L9 14 L6 11 Z";
+}
+
